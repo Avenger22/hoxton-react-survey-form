@@ -7,7 +7,12 @@ export default function AnswersList({ answersList }) {
     <ul>
 
       {answersList.map((answerItem, i) => (
-        <AnswersItem answerItem={answerItem} key={i} />
+
+        <AnswersItem 
+          answerItem={answerItem} 
+          key={i} 
+        />
+        
       ))}
       
     </ul>
