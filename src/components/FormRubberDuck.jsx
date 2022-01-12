@@ -16,19 +16,19 @@ function FormRubberDuck(props) {
         let resultBest = []
 
         if (event.target.bestYellow.checked === true) {
-            resultBest.push({color: "It's yellow!"})
+            resultBest.push("color")
         }
 
         if (event.target.bestSqueak.checked === true) {   
-            resultBest.push({sound: "It squeaks!"})
+            resultBest.push("sound")
         }
 
         if (event.target.bestLogo.checked === true) {   
-            resultBest.push({logo: "It has a logo!"})
+            resultBest.push("logo")
         }
 
         if (event.target.bestBig.checked === true) {   
-            resultBest.push({size: "Its big!"})
+            resultBest.push("size")
         }
 
         console.log(resultBest)
@@ -36,19 +36,19 @@ function FormRubberDuck(props) {
         let resultWorst = []
 
         if (event.target.worstYellow.checked === true) {
-            resultWorst.push({color: "It's yellow!"})
+            resultWorst.push("color")
         }
 
         if (event.target.worstSqueak.checked === true) {   
-            resultWorst.push({sound: "It squeaks!"})
+            resultWorst.push("sound")
         }
 
         if (event.target.worstLogo.checked === true) {   
-            resultWorst.push({logo: "It has a logo!"})
+            resultWorst.push("logo")
         }
 
         if (event.target.worstBig.checked === true) {   
-            resultWorst.push({size: "Its big!"})
+            resultWorst.push("size")
         }
 
         console.log(resultWorst)
@@ -56,19 +56,19 @@ function FormRubberDuck(props) {
         let resultTime = []
 
         if (event.target.timeSwimming.checked === true) {
-            resultTime.push({swimming: "Swimming"})
+            resultTime.push("swimming")
         }
 
         if (event.target.timeBathing.checked === true) {   
-            resultTime.push({bathing: "Bathing"})
+            resultTime.push("bathing")
         }
 
         if (event.target.timeChatting.checked === true) {   
-            resultTime.push({chatting: "Chatting"})
+            resultTime.push("chatting")
         }
 
         if (event.target.timeDont.checked === true) {   
-            resultTime.push({noTime: "I don't like to spend time with it"})
+            resultTime.push("noTime")
         }
 
         console.log(resultTime)
