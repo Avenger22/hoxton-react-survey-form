@@ -6,7 +6,7 @@ function Main(props) {
 
   const [open, setOpen] = useState(false); //Ignore this state
 
-  const {initialForm, setInitialForm} = props //decounsstrocting the object to not use props.
+  const {initialForm, setInitialForm, answersList, submitSurveyDetails, setAnswersList} = props //decounsstrocting the object to not use props.
 
   return (
 
@@ -16,9 +16,9 @@ function Main(props) {
 
         <h2>Answers list</h2>
 
-        {/* <AnswersList 
-        
-        /> */}
+        <AnswersList 
+          answersList = {answersList}
+        />
 
       </section>
 
@@ -27,6 +27,11 @@ function Main(props) {
         <FormRubberDuck 
           initialForm = {initialForm}
           setInitialForm = {setInitialForm}
+          
+          submitSurveyDetails = {submitSurveyDetails}
+          setAnswersList = {setAnswersList}
+
+          answersList = {answersList}
         />
       
       </section>

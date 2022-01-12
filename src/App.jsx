@@ -23,6 +23,21 @@ export default function App() {
     timeSpent: []
   }
 
+  let submitSurveyDetails = {
+    review: '',
+    email: '',
+
+    username: '',
+    consistency: '',
+
+    colour: '',
+    logo: '',
+
+    bestFeatures: [],
+    worstFeatures: [],
+    timeSpent: []
+}
+
   const [initialForm, setInitialForm] = useState(initialFormObject)
   const [answersList, setAnswersList] = useState([])
   // #endregion
@@ -35,6 +50,11 @@ export default function App() {
       <Main 
         initialForm = {initialForm}
         setInitialForm = {setInitialForm}
+
+        submitSurveyDetails = {submitSurveyDetails}
+        answersList = {answersList}
+        
+        setAnswersList = {setAnswersList}
       />
 
     </>

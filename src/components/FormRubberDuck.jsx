@@ -7,28 +7,28 @@ import RadioButtonsLogo from './RadioButtons/RadioButtonsLogo'
 
 function FormRubberDuck(props) {
 
-    const {initialForm, setInitialForm} = props 
+    const {initialForm, setInitialForm, submitSurveyDetails, setAnswersList, answersList} = props 
 
-    function handleFormSurveySubmit(event) {
+    function handleFormSurveySubmit(event, submitSurveyDetails) {
 
         event.preventDefault()
 
         let resultBest = []
 
         if (event.target.bestYellow.checked === true) {
-            resultBest.push('bestYellow')
+            resultBest.push({color: "It's yellow!"})
         }
 
         if (event.target.bestSqueak.checked === true) {   
-            resultBest.push('bestSqueak')
+            resultBest.push({sound: "It squeaks!"})
         }
 
         if (event.target.bestLogo.checked === true) {   
-            resultBest.push('bestLogo')
+            resultBest.push({logo: "It has a logo!"})
         }
 
         if (event.target.bestBig.checked === true) {   
-            resultBest.push('bestBig')
+            resultBest.push({size: "Its big!"})
         }
 
         console.log(resultBest)
@@ -36,19 +36,19 @@ function FormRubberDuck(props) {
         let resultWorst = []
 
         if (event.target.worstYellow.checked === true) {
-            resultWorst.push('worstYellow')
+            resultWorst.push({color: "It's yellow!"})
         }
 
         if (event.target.worstSqueak.checked === true) {   
-            resultWorst.push('worstSqueak')
+            resultWorst.push({sound: "It squeaks!"})
         }
 
         if (event.target.worstLogo.checked === true) {   
-            resultWorst.push('worstLogo')
+            resultWorst.push({logo: "It has a logo!"})
         }
 
         if (event.target.worstBig.checked === true) {   
-            resultWorst.push('worstBig')
+            resultWorst.push({size: "Its big!"})
         }
 
         console.log(resultWorst)
@@ -56,24 +56,24 @@ function FormRubberDuck(props) {
         let resultTime = []
 
         if (event.target.timeSwimming.checked === true) {
-            resultTime.push('timeSwimming')
+            resultTime.push({swimming: "Swimming"})
         }
 
         if (event.target.timeBathing.checked === true) {   
-            resultTime.push('timeBathing')
+            resultTime.push({bathing: "Bathing"})
         }
 
         if (event.target.timeChatting.checked === true) {   
-            resultTime.push('timeChatting')
+            resultTime.push({chatting: "Chatting"})
         }
 
         if (event.target.timeDont.checked === true) {   
-            resultTime.push('timeDont')
+            resultTime.push({noTime: "I don't like to spend time with it"})
         }
 
         console.log(resultTime)
 
-        const submitSurveyDetailt = {
+        submitSurveyDetails = {
             review: event.target.review.value,
             email: event.target.email.value,
 
@@ -88,7 +88,10 @@ function FormRubberDuck(props) {
             timeSpent: resultTime
         }
 
-        console.log(submitSurveyDetailt)
+        console.log(submitSurveyDetails)
+
+        const finalArrayUncontrollled = [...answersList, submitSurveyDetails]
+        setAnswersList(finalArrayUncontrollled) //this is MOST IMPORTANT 
 
         event.target.reset()
 

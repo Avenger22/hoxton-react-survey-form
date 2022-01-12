@@ -1,7 +1,9 @@
 import AnswersItem from "./AnswersItem";
 
-export default function AnswersList({ answersList }) {
+export default function AnswersList({answersList}) {
 
+  // const {answersList} = props 
+  
   return (
 
     <ul>
