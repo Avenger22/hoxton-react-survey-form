@@ -1,12 +1,12 @@
 import { useState } from "react";
-import AnswersList from "../components/AnswersList"
+import AnswersList from "./Answers/AnswersList"
 import FormRubberDuck from "./FormRubberDuck";
 
 function Main(props) {
 
   const [open, setOpen] = useState(false); //Ignore this state
 
-  const {initialForm, setInitialForm} = props  
+  const {initialForm, setInitialForm} = props //decounsstrocting the object to not use props.
 
   return (
 

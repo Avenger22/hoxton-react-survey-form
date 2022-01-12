@@ -1,4 +1,6 @@
-function Checkboxes() {
+function CheckboxesBest(props) {
+
+    const {initialForm, setInitialForm} = props 
 
     return (
 
@@ -6,28 +8,28 @@ function Checkboxes() {
 
             <li>
                 <label>
-                    <input name="bestFeatures" type="checkbox" value="colour" />
+                    <input name="bestYellow" type="checkbox"/>
                     It's yellow!
                 </label>
             </li>
 
             <li>
                 <label>
-                    <input name="bestFeatures" type="checkbox" value="sound" />
+                    <input name="bestSqueak" type="checkbox" />
                     It squeaks!
                 </label>
             </li>
 
             <li>
                 <label>
-                    <input name="bestFeatures" type="checkbox" value="logo" />
-                    It has alogo!
+                    <input name="bestLogo" type="checkbox" />
+                    It has a logo!
                 </label>
             </li>
 
             <li>
                 <label>
-                    <input name="bestFeatures" type="checkbox" value="size" />
+                    <input name="bestBig" type="checkbox" />
                     Its big!
                 </label>
             </li>
@@ -38,4 +40,4 @@ function Checkboxes() {
 
 }
 
-export default Checkboxes
+export default CheckboxesBest

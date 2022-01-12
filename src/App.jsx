@@ -4,7 +4,7 @@ import "./app.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 
-import AnswersList from "./components/AnswersList";
+import AnswersList from "./components/Answers/AnswersList";
 import { useState } from "react";
 // #endregion
 
@@ -36,7 +36,7 @@ export default function App() {
         initialForm = {initialForm}
         setInitialForm = {setInitialForm}
       />
-      
+
     </>
 
   )
